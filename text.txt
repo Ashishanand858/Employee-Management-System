@@ -1,0 +1,6 @@
+react-router-dom : used for routing
+lucide-react : used for icons
+react-hot-toast : use to display toast notification
+
+CodeRabbit : AI powered Code review tool, find issue and suggest improvements.
+It also offers CLI feature.
