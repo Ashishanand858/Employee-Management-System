@@ -98,7 +98,7 @@ const Sidebar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`ground flex items-center gap-3 px-3 py-2.5
+                className={`group flex items-center gap-3 px-3 py-2.5
                         rounded-md text-[13px] font-medium transition-all duration-150 relative
                         ${isActive ? "bg-indigo-500/12 text-indigo-300" : "hover:text-white hover:bg-white/4"}`}
               >
