@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowRightIcon, CalendarIcon, DollarSignIcon, FileTextIcon, Link } from 'lucide-react'
+import { ArrowRightIcon, CalendarIcon, DollarSignIcon, FileTextIcon } from 'lucide-react'
+import {Link} from 'react-router-dom'
 
 const EmployeeDashboard = ({ data }) => {
   const emp = data.employee;
@@ -8,21 +9,23 @@ const EmployeeDashboard = ({ data }) => {
       icon: CalendarIcon,
       value: data.currentMonthAttendance,
       title: "Days Present",
-      subtitle: "This month"
+      subtitle: "This month",
     },
     {
       icon: FileTextIcon,
       value: data.pendingLeaves,
       title: "Pending Leaves",
-      subtitle: "Awaiting approval"
+      subtitle: "Awaiting approval",
     },
     {
       icon: DollarSignIcon,
-      value: data.latestPayslip ? `$${data.latestPayslip.netSalary?.toLocalString()}` : "N/A",
+      value: data.latestPayslip
+        ? `$${data.latestPayslip.netSalary?.toLocaleString()}`
+        : "N/A",
       title: "Latest Payslip",
-      subtitle: "Most recent payout"
+      subtitle: "Most recent payout",
     },
-  ]
+  ];
 
   return (
     <div className='animate-fade-in'>
@@ -62,7 +65,8 @@ const EmployeeDashboard = ({ data }) => {
           Mark Attendance <ArrowRightIcon className='w-4 h-4'/>
         </Link>
 
-        <Link to={"/leave"} className='btn-secondary text-center'>
+        <Link to={"/leave"} className='btn-secondary text-center
+        inline-flex items-center justify-center gap-2 ml-4'>
           Apply for Leave <ArrowRightIcon className='w-4 h-4'/>
         </Link>
       </div>

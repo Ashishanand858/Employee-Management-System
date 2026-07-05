@@ -1,5 +1,6 @@
 import React from 'react'
 import { Building2Icon, CalendarIcon, FileTextIcon, UsersIcon } from 'lucide-react'
+import { Link } from "react-router-dom"
 
 const AdminDashboard = ({ data }) => {
     const stats = [
