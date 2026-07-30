@@ -1,5 +1,4 @@
 // Attendance Check-Out Remainder email template
-
 const template1 = `
                 <div style="max-width: 600px;">
                     <h2>Hi ${employee.firstName}, 👋</h2>

@@ -16,3 +16,12 @@ mongoose : connect our project with MongoDB database
 nodemon : automatically restart our code whenever we make any change in the code
 
 seed.js : Runs only once for the Admin Profile
+
+inngest : For some background tasks to send attendance remainder and leave application remainders email.
+npm install inngest
+Add INNGEST_EVENT_KEY and INNGEST_SIGNING_KEY in .env file
+
+nodemailer : For adding email functionality
+npm install nodemailer
+
+brevo : To get SMTP_USER and SMTP_PASS
