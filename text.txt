@@ -25,3 +25,5 @@ nodemailer : For adding email functionality
 npm install nodemailer
 
 brevo : To get SMTP_USER and SMTP_PASS
+
+vercel : for deployment
