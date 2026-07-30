@@ -41,7 +41,7 @@ const PrintPayslip = () => {
             Employee Name
           </p>
           <p className="font-semibold text-slate-900">
-            {payslip.employee?.firstName} {payslip.employee.lastName}
+            {payslip.employee?.firstName} {payslip.employee?.lastName}
           </p>
         </div>
         <div>

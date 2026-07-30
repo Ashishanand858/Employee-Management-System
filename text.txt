@@ -4,3 +4,26 @@ react-hot-toast : use to display toast notification
 
 CodeRabbit : AI powered Code review tool, find issue and suggest improvements.
 It also offers CLI feature.
+
+
+express : used for creating backend server
+cors : allow our backend to connect with frontend
+dotenv : for using environment variable in our project
+multer : parse the form data
+jsonwebtoken : used to generate authentication token
+bcrypt : used to encrypt the user password and then store
+mongoose : connect our project with MongoDB database
+nodemon : automatically restart our code whenever we make any change in the code
+
+seed.js : Runs only once for the Admin Profile
+
+inngest : For some background tasks to send attendance remainder and leave application remainders email.
+npm install inngest
+Add INNGEST_EVENT_KEY and INNGEST_SIGNING_KEY in .env file
+
+nodemailer : For adding email functionality
+npm install nodemailer
+
+brevo : To get SMTP_USER and SMTP_PASS
+
+vercel : for deployment
