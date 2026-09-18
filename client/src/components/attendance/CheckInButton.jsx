@@ -1,17 +1,23 @@
 import { Loader2Icon, LogInIcon, LogOutIcon } from 'lucide-react';
 import React, { useState } from 'react'
+import api from '../../api/axios';
+import toast from 'react-hot-toast';
 
 const CheckInButton = ({todayRecord, onAction}) => {
 
     const [loading, setLoading] = useState(false);
 
     const handleAttendance = async () => {
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-            onAction()
-        },1000)
-    }
+      setLoading(true);
+      try {
+        await api.post("/attendance");
+        onAction();
+      }
+      catch (error) {
+        toast.error(error?.response?.data?.error || error?.message);
+      }
+      setLoading(false);
+    };
 
     if (todayRecord?.checkOut) {
         return (
@@ -27,7 +33,7 @@ const CheckInButton = ({todayRecord, onAction}) => {
         )
     }
 
-    const isCheckedIn = !!todayRecord?.isCheckedIn;
+    const isCheckedIn = !!todayRecord?.checkIn;
 
     return (
         <div className='md:absolute md:bottom-4 md:right-4 flex justify-center md:justify-end mb-4'>
