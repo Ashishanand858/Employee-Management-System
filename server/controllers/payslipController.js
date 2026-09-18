@@ -1,3 +1,4 @@
+import Employee from "../models/Employee.js";
 import Payslip from "../models/Payslip.js";
 
 
